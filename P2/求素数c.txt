@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+	int m, n, i, j, k, flag;
+	scanf("%d%d", &m, &n);
+	k = 0;
+	for (i = m; i <= n; i++){
+		for (j = 2,flag=0; j < i; j++){
+			if (i%j == 0){
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0){
+			printf("%d ", i);
+			k++;
+			if (k == 10){
+				putchar('\n');
+				k = 0;
+			}
+		}
+	}
+	return 0;
+}
